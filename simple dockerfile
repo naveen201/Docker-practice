@@ -1,0 +1,11 @@
+#How to use these  COPY,ADN,ENV ,WORKDIR
+
+FROM ubuntu
+WORKDIR /tmp
+ENV myname NaveenRajput
+COPY samplefile /tmp
+ADD sample1.tar.gz /tmp
+RUN echo "for testing purpose" >/tmp/n
+
+
+
