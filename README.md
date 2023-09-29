@@ -52,6 +52,13 @@ docker pull naveen20/apachewebserver
 ![image](https://github.com/naveen201/Docker-practice/assets/42841119/25623fe8-0ebc-42c1-881a-3b0ad2bf49e1)
 
 
+ 
+
+3------------volume-dockerfile--------------------ss-
+![image](https://github.com/naveen201/Docker-practice/assets/42841119/66f1b27d-ba4a-4c13-b61a-9d9b60dc2c06)
+
+
+
 
 
 
