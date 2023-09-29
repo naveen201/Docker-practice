@@ -1,0 +1,20 @@
+#How to declared directory as VOLUME in Dockerfile.
+
+FROM ubuntu:latest
+RUN mkdir /data
+WORKDIR /data
+RUN echo "Here data directoy is defined as vomule for container" > test
+VOLUME /data
+
+
+
+steps-
+vi Dockerfile  --->paste here docker file contnet from above
+docker build -t volume-images .    --->create image from docker file
+docker images    ---->list images
+docker run -td --name volume-container volume-images    --->create container from image in detach mode
+docker ps   ---->show running container 
+docker exec -it df60b20f0087 bash   -->go inside running container
+
+===============Snap shot attached in README.md==================
+
