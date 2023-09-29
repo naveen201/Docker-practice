@@ -42,4 +42,10 @@ docker pull naveen20/apachewebserver
 
 
 
+2---simple dockerfile ss-----
+![image](https://github.com/naveen201/Docker-practice/assets/42841119/25623fe8-0ebc-42c1-881a-3b0ad2bf49e1)
+
+
+
+
 
