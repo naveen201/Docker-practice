@@ -18,3 +18,25 @@ docker exec -it df60b20f0087 bash   -->go inside running container
 
 ===============Snap shot attached in README.md==================
 
+
+
++++++++++++++++++++++++++++How to share  volume between container to container++++++++++++++++++++++++++
+steps-->
+docker run -td --name c5 -v /data-volume ubuntu
+--->here creating container i.e. c5 and with volume i.e. /data-volume
+
+docker run -td --name c6 --privileged=true --volumes-from c5 ubuntu
+--->create new container i.e. c6 and define volume from c5 container.
+
+😎now data is replicated in both the container c5 and c6 
+
+
+
+++++++++++++++++++++++++++++++++++How to share  volume between host and container+++++++++++++++++++++++++++++++++++++++++++
+
+docker run -td --name hc -v /root:/data --privileged=true ubuntu /bin/bash
+--->/root:/data (host:container)
+root-->on host as volume directory 
+data-->on container as volume directory 
+
+
