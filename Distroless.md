@@ -1,0 +1,53 @@
+## Traditional Docker images
+
+Traditional Docker images, based on full Linux distributions, come with larger sizes and a broader set of packages, utilities, and libraries. The drawbacks of such images include increased attack surface due to more potential vulnerabilities, longer deployment times due to larger image sizes, and higher resource consumption. It is not ideal for microservices architecture due to their overhead and slower startup times compared to lightweight alternatives like Distroless images.
+
+
+
+## Google introduced Distroless images for this problem.
+
+Google introduced Distroless images as a way to create minimal, secure, and lightweight container images. These images are often used in scenarios where security and size are critical concerns, such as in production deployments and containerized applications running in Kubernetes clusters.
+
+## What is a Distroless images?
+
+It contain only application and its runtime dependencies and Container images are designed to be as minimal as possible.
+It does not contain package managers, shells or any other programs you would expect to find in a standard Linux distribution.
+
+## Advantages of distorless imagese
+
+Smaller Image Size
+Smaller images mean faster deployments, reduced storage costs, and improved network transfer times, especially in large-scale deployments where these factors can be significant.
+
+Improved Security
+Distroless images designed as minimal as possible, it reduce the vulnerable components.
+
+Reduced Attack Surface
+It excluding unnecessary packages and utilities, the attack surface is significantly reduced. 
+
+Faster Deployment
+Smaller images are quicker to deploy. They reduce the time it takes to pull images from a registry and launch containers
+
+Focused Use Cases
+It useful for specific use cases, such as microservices architecture, serverless computing, or any scenario where lightweight, fast-booting, and secure containers are essential.
+
+
+
+## Limation of Distroless images
+
+No Shell Access:
+Images do not include a shell. This means you cannot log into the container for troubleshooting purposes, making it more difficult to inspect the container's internals interactively.
+
+Limited Debugging and Troubleshooting:
+If issues arise in a Distroless container, diagnosing problems can be challenging without the standard set of tools typically available in traditional Linux distributions.
+
+Static Dependency Bundling:
+Images require you to bundle all dependencies (including dynamic libraries) statically within your application binary
+
+Limited Language Support:
+It available for programming languages like Go, Java, Node.js and Python 
+
+
+
+## Summary
+
+Distroless images in Docker provide a minimal and secure foundation for containerized applications by excluding unnecessary packages and utilities, reducing the attack surface, improving security, and decreasing image size. While offering enhanced protection and faster deployment, they lack debugging tools and shell access, making troubleshooting more challenging. Consider Distroless images for security-sensitive deployments and scenarios where smaller image size and reduced complexity are paramount.
